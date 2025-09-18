@@ -2,22 +2,134 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Cuestionarios</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionarios - Imaginando el Futuro</title>
+  <style>
+    /* ===== Estilos generales ===== */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff; /* AliceBlue */
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background-color: #add8e6; /* LightBlue */
+      padding: 20px;
+      border-bottom: 2px solid #87cefa; /* LightSkyBlue */
+    }
+
+    h1 {
+      margin: 0;
+      color: #4682b4; /* SteelBlue */
+    }
+
+    /* ===== Contenedor principal ===== */
+    .container {
+      padding: 20px;
+    }
+
+    /* ===== Sección de bienvenida ===== */
+    .bienvenida {
+      margin-bottom: 30px;
+    }
+
+    .imagen-bienvenida {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    /* ===== Sección de cuestionarios ===== */
+    .cuestionarios {
+      margin-top: 20px;
+    }
+
+    .cuestionarios h2 {
+      color: #5f9ea0; /* CadetBlue */
+    }
+
+    .cuestionarios ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .cuestionarios li {
+      margin: 10px 0;
+    }
+
+    /* ===== Botones ===== */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #87cefa; /* LightSkyBlue */
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #4682b4; /* SteelBlue */
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: #add8e6; /* LightBlue */
+      padding: 10px;
+      text-align: center;
+      border-top: 2px solid #87cefa; /* LightSkyBlue */
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      body { font-size: 14px; }
+      .container { padding: 15px; }
+      .imagen-bienvenida { max-width: 90%; }
+    }
+
+    @media (max-width: 480px) {
+      body { font-size: 12px; }
+      .container { padding: 10px; }
+      .imagen-bienvenida { max-width: 80%; }
+      .btn { padding: 8px 15px; font-size: 14px; }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>🧠 Cuestionarios Interactivos</h1>
+  </header>
+
   <div class="container">
-    <h1>Selecciona un Cuestionario</h1>
+    <!-- Sección de bienvenida -->
+    <section class="bienvenida">
+      <img src="imagenes/Imagen2.jpg" alt="Bienvenida" class="imagen-bienvenida">
+      <p>Explora y responde a nuestros cuestionarios diseñados para imaginar el futuro de la tecnología.</p>
+    </section>
 
-    <nav>
-      <a href="https://pretest-production.up.railway.app/" class="btn btn-red">➡ Cuestionario 1</a>
-      <a href="https://gallant-wisdom-production.up.railway.app/" class="btn btn-green">➡ Cuestionario 2</a>
-    </nav>
-
-    <footer>
-      <a href="index.html" class="btn btn-back">⬅ Regresar</a>
-      <a href="modulos.html" class="btn btn-next">➡ Módulos</a>
-    </footer>
+    <!-- Sección de cuestionarios -->
+    <section class="cuestionarios">
+      <h2>Selecciona un cuestionario:</h2>
+      <ul>
+        <li><a href="cuestionario1.html" class="btn">Cuestionario 1</a></li>
+        <li><a href="cuestionario2.html" class="btn">Cuestionario 2</a></li>
+        <li><a href="cuestionario3.html" class="btn">Cuestionario 3</a></li>
+      </ul>
+    </section>
   </div>
+
+  <footer>
+    <p>&copy; 2025 Imaginando el Futuro. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
+
+
