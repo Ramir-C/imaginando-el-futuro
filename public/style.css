@@ -1,55 +1,74 @@
+/* ===== Estilos generales ===== */
 body {
   font-family: Arial, sans-serif;
-  background: #f0f8ff;
+  background-color: #f0f8ff; /* Fondo principal */
+  color: #333333;
   text-align: center;
-  margin: 0;
+  margin: 20px;
   padding: 0;
+  font-size: 16px;
 }
 
+/* ===== Header ===== */
 header {
-  background: #4cafef;
+  background-color: #4cafef;
   color: white;
   padding: 15px;
   border-radius: 0 0 15px 15px;
 }
 
-h1, h2 {
+h1, h2, h3 {
   margin: 10px 0;
+  color: #0056b3; /* Azul encabezados */
 }
 
+/* ===== Imagen de bienvenida ===== */
 .imagen-bienvenida {
-  max-width: 250px;
-  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
   display: block;
+  margin: 20px auto;
 }
 
+/* ===== Botones ===== */
 .btn {
   display: inline-block;
   margin: 10px;
   padding: 12px 20px;
-  background: #ff9800;
+  background-color: #ff9800;
   color: white;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
+  transition: background 0.3s;
 }
 
 .btn:hover {
-  background: #e68900;
+  background-color: #e68900;
 }
 
+/* ===== Links especiales ===== */
 .link-juego, .link-video {
   display: block;
-  margin: 5px;
+  margin: 5px auto;
   padding: 10px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  width: fit-content;
 }
 
-.link-juego { background: #a5d6a7; color: #1b5e20; }
-.link-video { background: #ffcc80; color: #e65100; }
+.link-juego { 
+  background-color: #a5d6a7; 
+  color: #1b5e20; 
+}
 
+.link-video { 
+  background-color: #ffcc80; 
+  color: #e65100; 
+}
+
+/* ===== Tablas ===== */
 table {
   width: 80%;
   margin: 20px auto;
@@ -65,60 +84,28 @@ th, td {
 }
 
 th {
-  background: #2196f3;
+  background-color: #2196f3;
   color: white;
 }
-/* Estilos por defecto para pantallas grandes */
-body {
-  font-size: 16px;
-  margin: 20px;
-}
 
-/* Estilos para pantallas medianas (tabletas) */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    margin: 15px;
-  }
-}
-
-/* Estilos para pantallas pequeñas (móviles) */
-@media (max-width: 480px) {
-  body {
-    font-size: 12px;
-    margin: 10px;
-  }
-}
-/* Fondo de la página */
-body {
-  background-color: #f0f0f0; /* Gris claro */
-  color: #333333; /* Texto oscuro */
-}
-
-/* Encabezados */
-h1, h2, h3 {
-  color: #0056b3; /* Azul */
-}
-
-/* Botones */
+/* ===== Botones HTML (no links) ===== */
 button {
-  background-color: #007bff; /* Azul brillante */
+  background-color: #007bff;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #0056b3; /* Azul oscuro al pasar el ratón */
-}
-/* Estilos por defecto para pantallas grandes */
-body {
-  font-size: 16px;
-  margin: 20px;
+  background-color: #0056b3;
 }
 
-/* Estilos para pantallas medianas (tabletas) */
+/* ===== Responsive ===== */
+
+/* Tabletas */
 @media (max-width: 768px) {
   body {
     font-size: 14px;
@@ -126,18 +113,21 @@ body {
   }
 }
 
-/* Estilos para pantallas pequeñas (móviles) */
+/* Móviles */
 @media (max-width: 480px) {
   body {
     font-size: 12px;
     margin: 10px;
+  }
+  
+  .btn, .link-juego, .link-video {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  table {
+    width: 95%;
+  }
 }
 
-/* Ejemplo adicional para la imagen de bienvenida */
-.imagen-bienvenida {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
 
