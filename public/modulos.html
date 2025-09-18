@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulos</title>
+  <style>
+    body { font-family: Comic Sans MS, sans-serif; background: #fffde7; text-align: center; }
+    h1 { color: #ff5722; }
+    .modulo {
+      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      background: #e1f5fe;
+    }
+    a {
+      display: block;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      color: white;
+    }
+    .percepcion a:nth-child(odd) { background: #4caf50; }
+    .percepcion a:nth-child(even) { background: #66bb6a; }
+    .inteligencia a:nth-child(odd) { background: #2196f3; }
+    .inteligencia a:nth-child(even) { background: #42a5f5; }
+    .ayuda a { background: #9c27b0; }
+    .btn { margin-top: 20px; padding: 10px 20px; background: #f44336; color: white; border-radius: 8px; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>Selecciona un Módulo</h1>
+
+  <div class="modulo percepcion">
+    <h2>👀 Módulo de Percepción</h2>
+    <!-- Inserta los links de juegos -->
+    <a href="LINK_ESFERA">Juego: Esfera</a>
+    <a href="LINK_CUBO">Juego: Cubo</a>
+    <a href="LINK_CONO">Juego: Cono</a>
+    <a href="LINK_TRIANGULO">Juego: Triángulo</a>
+    <a href="LINK_PRISMA">Juego: Prisma</a>
+  </div>
+
+  <div class="modulo inteligencia">
+    <h2>🧠 Módulo de Inteligencia</h2>
+    <!-- Inserta los links de juegos -->
+    <a href="LINK_FIGURAS">Recordando Figuras</a>
+    <a href="LINK_NUMEROS">Recordando Números</a>
+    <a href="LINK_RECUERDA_GANA">Recuerda y Gana</a>
+    <a href="LINK_ROTACION3D">Rotación en 3D</a>
+    <a href="LINK_ADIVINA">Adivina mi Posición</a>
+  </div>
+
+  <div class="modulo ayuda">
+    <h2>📹 Ayuda</h2>
+    <!-- Inserta tus videos -->
+    <a href="LINK_VIDEO1">Video 1</a>
+    <a href="LINK_VIDEO2">Video 2</a>
+    <a href="LINK_VIDEO3">Video 3</a>
+  </div>
+
+  <a href="index.html" class="btn">⬅️ Regresar</a>
+  <a href="resultados.html" class="btn">➡️ Ver Resultados</a>
+</body>
+</html>
