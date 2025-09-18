@@ -2,20 +2,181 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Imaginando el Futuro</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== Estilos generales ===== */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      color: #333333;
+      text-align: center;
+      margin: 20px;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background-color: #4cafef;
+      color: white;
+      padding: 15px;
+      border-radius: 0 0 15px 15px;
+    }
+
+    h1, h2, h3 {
+      margin: 10px 0;
+      color: #0056b3;
+    }
+
+    /* ===== Imagen de bienvenida ===== */
+    .imagen-bienvenida {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+
+    /* ===== Botones ===== */
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background-color: #ff9800;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e68900;
+    }
+
+    /* ===== Links especiales ===== */
+    .link-juego, .link-video {
+      display: block;
+      margin: 5px auto;
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      width: fit-content;
+    }
+
+    .link-juego { 
+      background-color: #a5d6a7; 
+      color: #1b5e20; 
+    }
+
+    .link-video { 
+      background-color: #ffcc80; 
+      color: #e65100; 
+    }
+
+    /* ===== Tablas ===== */
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #2196f3;
+      color: white;
+    }
+
+    /* ===== Botones HTML (no links) ===== */
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px;
+        margin: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 12px;
+        margin: 10px;
+      }
+      
+      .btn, .link-juego, .link-video {
+        padding: 8px 15px;
+        font-size: 14px;
+      }
+
+      table {
+        width: 95%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://github.com/Ramir-C/imaginando-el-futuro/blob/main/imagenes/Imagen1.png" alt="Logo del proyecto" class="imagen-bienvenida"/>
-
+  <header>
     <h1>🌟 Imaginando el Futuro 🌟</h1>
+  </header>
+
+  <div class="container">
+    <!-- Imagen de bienvenida -->
+    <img src="imagenes/Imagen1.png" alt="Logo del proyecto" class="imagen-bienvenida"/>
+
+    <!-- Botón principal -->
     <nav>
-      <a href="cuestionarios.html" class="btn btn-primary">➡ Comenzar</a>
+      <a href="cuestionarios.html" class="btn">➡ Comenzar</a>
     </nav>
+
+    <!-- Ejemplo de links adicionales -->
+    <a href="juego.html" class="link-juego">🎮 Jugar</a>
+    <a href="video.html" class="link-video">🎥 Ver Video</a>
+
+    <!-- Ejemplo de tabla -->
+    <table>
+      <thead>
+        <tr>
+          <th>Actividad</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cuestionario</td>
+          <td>Responde preguntas sobre el futuro y la tecnología.</td>
+        </tr>
+        <tr>
+          <td>Juego</td>
+          <td>Interactúa con actividades lúdicas y educativas.</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>
 </html>
+
 
 
 
