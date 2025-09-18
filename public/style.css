@@ -68,3 +68,25 @@ th {
   background: #2196f3;
   color: white;
 }
+/* Estilos por defecto para pantallas grandes */
+body {
+  font-size: 16px;
+  margin: 20px;
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    margin: 15px;
+  }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+    margin: 10px;
+  }
+}
+
