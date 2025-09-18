@@ -4,38 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Imaginando el Futuro</title>
-  <link rel="stylesheet" href="style.css">
   <style>
-    /* ===== Estilos generales ===== */
+    /* ===== Fondo animado con figuras 3D y matemáticas ===== */
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f8ff;
-      color: #333333;
-      text-align: center;
-      margin: 20px;
+      margin: 0;
       padding: 0;
-      font-size: 16px;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #f0f8ff, #e0f7fa);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
     }
 
-    /* ===== Header ===== */
-    header {
-      background-color: #4cafef;
-      color: white;
-      padding: 15px;
-      border-radius: 0 0 15px 15px;
+    /* ===== Contenedor principal ===== */
+    .container {
+      position: relative;
+      z-index: 10;
+      text-align: center;
     }
 
-    h1, h2, h3 {
-      margin: 10px 0;
-      color: #0056b3;
-    }
-
-    /* ===== Imagen de bienvenida ===== */
+    /* ===== Imagen centrada ===== */
     .imagen-bienvenida {
-      max-width: 100%;
+      max-width: 300px;
+      width: 50%;
       height: auto;
+      margin-bottom: 20px;
       display: block;
-      margin: 20px auto;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      transition: transform 0.5s;
+    }
+
+    .imagen-bienvenida:hover {
+      transform: scale(1.1) rotate(5deg);
     }
 
     /* ===== Botones ===== */
@@ -48,134 +53,117 @@
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s;
     }
 
     .btn:hover {
       background-color: #e68900;
+      transform: scale(1.05);
     }
 
-    /* ===== Links especiales ===== */
-    .link-juego, .link-video {
-      display: block;
-      margin: 5px auto;
-      padding: 10px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      width: fit-content;
-    }
-
-    .link-juego { 
-      background-color: #a5d6a7; 
-      color: #1b5e20; 
-    }
-
-    .link-video { 
-      background-color: #ffcc80; 
-      color: #e65100; 
-    }
-
-    /* ===== Tablas ===== */
-    table {
-      width: 80%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    th, td {
-      padding: 10px;
-      border: 1px solid #ddd;
-    }
-
-    th {
-      background-color: #2196f3;
-      color: white;
-    }
-
-    /* ===== Botones HTML (no links) ===== */
-    button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 768px) {
-      body {
-        font-size: 14px;
-        margin: 15px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      body {
-        font-size: 12px;
-        margin: 10px;
-      }
-      
-      .btn, .link-juego, .link-video {
-        padding: 8px 15px;
-        font-size: 14px;
-      }
-
-      table {
-        width: 95%;
-      }
+    /* ===== Fondo animado con canvas ===== */
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🌟 Imaginando el Futuro 🌟</h1>
-  </header>
+
+  <!-- Canvas para animaciones de fondo -->
+  <canvas id="fondo"></canvas>
 
   <div class="container">
-    <!-- Imagen de bienvenida -->
-    <img src="imagenes/Imagen1.png" alt="Logo del proyecto" class="imagen-bienvenida"/>
-
-    <!-- Botón principal -->
+    <img src="614cf497-d282-474f-bf23-cd5ffcec54d5.png" alt="Logo del proyecto" class="imagen-bienvenida"/>
     <nav>
       <a href="cuestionarios.html" class="btn">➡ Comenzar</a>
     </nav>
-
-    <!-- Ejemplo de links adicionales -->
-    <a href="juego.html" class="link-juego">🎮 Jugar</a>
-    <a href="video.html" class="link-video">🎥 Ver Video</a>
-
-    <!-- Ejemplo de tabla -->
-    <table>
-      <thead>
-        <tr>
-          <th>Actividad</th>
-          <th>Descripción</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Cuestionario</td>
-          <td>Responde preguntas sobre el futuro y la tecnología.</td>
-        </tr>
-        <tr>
-          <td>Juego</td>
-          <td>Interactúa con actividades lúdicas y educativas.</td>
-        </tr>
-      </tbody>
-    </table>
+    <a href="juego.html" class="btn">🎮 Jugar</a>
+    <a href="video.html" class="btn">🎥 Ver Video</a>
   </div>
+
+  <script>
+    // ===== Canvas con formas geométricas y 3D abstracto =====
+    const canvas = document.getElementById('fondo');
+    const ctx = canvas.getContext('2d');
+
+    let w = canvas.width = window.innerWidth;
+    let h = canvas.height = window.innerHeight;
+
+    const shapes = [];
+    const colors = ['#FF5722','#4CAF50','#2196F3','#FFEB3B','#9C27B0'];
+
+    function random(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    // Crear figuras aleatorias
+    for(let i=0; i<50; i++){
+      shapes.push({
+        x: random(0,w),
+        y: random(0,h),
+        size: random(20,60),
+        color: colors[Math.floor(random(0, colors.length))],
+        dx: random(-1,1),
+        dy: random(-1,1),
+        type: ['cube','sphere','pyramid','cone'][Math.floor(random(0,4))]
+      });
+    }
+
+    function drawShape(shape){
+      ctx.fillStyle = shape.color;
+      ctx.beginPath();
+      switch(shape.type){
+        case 'cube':
+          ctx.fillRect(shape.x, shape.y, shape.size, shape.size);
+          break;
+        case 'sphere':
+          ctx.arc(shape.x, shape.y, shape.size/2, 0, Math.PI*2);
+          ctx.fill();
+          break;
+        case 'pyramid':
+          ctx.moveTo(shape.x, shape.y);
+          ctx.lineTo(shape.x+shape.size/2, shape.y+shape.size);
+          ctx.lineTo(shape.x-shape.size/2, shape.y+shape.size);
+          ctx.closePath();
+          ctx.fill();
+          break;
+        case 'cone':
+          ctx.moveTo(shape.x, shape.y);
+          ctx.lineTo(shape.x+shape.size/2, shape.y+shape.size);
+          ctx.lineTo(shape.x-shape.size/2, shape.y+shape.size);
+          ctx.closePath();
+          ctx.fill();
+          break;
+      }
+    }
+
+    function animate(){
+      ctx.clearRect(0,0,w,h);
+      shapes.forEach(s => {
+        s.x += s.dx;
+        s.y += s.dy;
+        if(s.x < 0 || s.x > w) s.dx *= -1;
+        if(s.y < 0 || s.y > h) s.dy *= -1;
+        drawShape(s);
+      });
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    window.addEventListener('resize', ()=>{
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+    });
+  </script>
 </body>
 </html>
+
 
 
 
